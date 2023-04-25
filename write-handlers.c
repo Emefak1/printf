@@ -2,7 +2,7 @@
 
 /************************* WRITE HANDLE *************************/
 /**
- * handle-write_char - Prints a string
+ * handle_write_char - Prints a string
  * @c: char types.
  * @buffer: Buffer array to handle print
  * @flags:  Calculate active flags.
@@ -13,7 +13,7 @@
  * Return: Number of chars printed.
  */
 
-int handle-write_char(char c, char buffer[],
+int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size)
 { /* char is stored at left and paddind at buffer's right */
 	int i = 0;
