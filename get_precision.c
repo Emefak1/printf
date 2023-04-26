@@ -1,6 +1,19 @@
 #include "main.h"
 
 /**
+ * is_digit - Checks if a character is a digit.
+ * @c: Character to check.
+ *
+ *
+ * Return: 1 if c is a digit, 0 otherwise.
+ */
+
+int is_digit(char c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+/**
  * get_precision - Calculates the precision for printing
  * @format: Formatted string in which to print the arguments
  * @i: List of arguments to be printed.
@@ -37,6 +50,5 @@ int get_precision(const char *format, int *i, va_list list)
 	}
 
 	*i = curr_i - 1;
-
 	return (precision);
 }

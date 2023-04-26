@@ -54,6 +54,29 @@ int print_pointer(va_list types, char buffer[],
 		width, flags, padd, extra_c, padd_start));
 }
 
+/**
+ * append_hexa_code - Appends hexa code to a buffer
+ * @c: Non-printable character to be converted to hexa code
+ * @buffer: Buffer array to handle print
+ * @index: Index at which the hexa code should be appended to the buffer
+ * Return: Number of characters added to the buffer
+ */
+
+int append_hexa_code(char c, char buffer[], int index)
+{
+	int i;
+	char hexa_code[] = "0123456789abcdef";
+
+	buffer[index++] = '\\';
+	buffer[index++] = 'x';
+
+	for (i = 1; i >= 0; i--)
+		buffer[index + i] = hexa_code[(c >> (4 * i)) & 0xf];
+
+	return (2);
+}
+
+
 /************************* PRINT NON PRINTABLE *************************/
 
 /**
